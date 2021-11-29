@@ -18,8 +18,26 @@ namespace DataStructure
             l.AddLast(12); 
             l.AddFirst(4);
             l.Display();
+            Console.WriteLine($"Size : {l.Length()}");
+
             l.AddAny(20,3);
             l.Display();
+            Console.WriteLine($"Size : {l.Length()}");
+
+            l.RemoveFirst();
+            l.Display();
+            Console.WriteLine($"Size : {l.Length()}");
+
+            l.RemoveLast();
+            l.Display();
+            Console.WriteLine($"Size : {l.Length()}");
+
+            l.RemoveAny(2);
+            l.Display();
+            Console.WriteLine($"Size : {l.Length()}");
+
+
+
             Console.ReadKey();
         }
     }
