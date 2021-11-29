@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataStructure.LinkedList;
+using DataStructure.LinkedList.CircularLinkedList;
 
 namespace DataStructure
 {
@@ -11,11 +12,31 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
+            TestCircularLinkedList();
+
+            Console.ReadKey();
+        }
+
+        private static void TestCircularLinkedList()
+        {
+            var cirLL = new CircularLinkedList();
+            cirLL.AddLast(4);
+            cirLL.AddLast(5);
+            cirLL.AddLast(16);
+            cirLL.AddLast(13);
+            cirLL.Display();
+
+
+        }
+
+        private static void TestLinkedList()
+        {
+
             var l = new LinkedListNode();
 
             l.InsertSorted(7);
             l.InsertSorted(4);
-            l.InsertSorted(12); 
+            l.InsertSorted(12);
             l.InsertSorted(5);
             l.Display();
             Console.WriteLine($"Size : {l.Length()}");
@@ -39,9 +60,6 @@ namespace DataStructure
             //l.Display();
             //Console.WriteLine($"Size : {l.Length()}");
 
-
-
-            Console.ReadKey();
         }
     }
 }
