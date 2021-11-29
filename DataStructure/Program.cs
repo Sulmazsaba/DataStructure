@@ -13,16 +13,16 @@ namespace DataStructure
         {
             var l = new LinkedListNode();
 
-            l.AddLast(7);
-            l.AddLast(4);
-            l.AddLast(12); 
-            l.AddFirst(4);
+            l.InsertSorted(7);
+            l.InsertSorted(4);
+            l.InsertSorted(12); 
+            l.InsertSorted(5);
             l.Display();
             Console.WriteLine($"Size : {l.Length()}");
 
-            l.AddAny(20,3);
-            l.Display();
-            Console.WriteLine($"Size : {l.Length()}");
+            //l.AddAny(20,3);
+            //l.Display();
+            //Console.WriteLine($"Size : {l.Length()}");
 
             var key = 20;
             Console.WriteLine($"{key} index is {l.Search(key)}");

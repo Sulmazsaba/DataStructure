@@ -160,7 +160,7 @@ namespace DataStructure.LinkedList
             int index = 0;
             var p = head;
 
-            while (index <= size - 1)
+            while (p != null)
             {
                 if (p.element == key)
                     return index;
@@ -172,6 +172,40 @@ namespace DataStructure.LinkedList
 
             return -1;
         }
+
+        public void InsertSorted(int e)
+        {
+            var newest = new Node(e, null);
+            if (IsEmpty())
+                head = newest;
+            else
+            {
+                var p = head;
+                var q = head;
+                while (p != null && p.element < e)
+                {
+                    q = p;
+                    p = p.next;
+
+                }
+
+                if (p == head)
+                {
+                    newest.next = head;
+                    head = newest;
+                }
+                else
+                {
+                    newest.next = q.next;
+                    q.next = newest;
+
+                }
+
+
+            }
+            size++;
+        }
+
 
         public void Display()
         {
