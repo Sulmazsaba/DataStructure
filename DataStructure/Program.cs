@@ -24,17 +24,20 @@ namespace DataStructure
             l.Display();
             Console.WriteLine($"Size : {l.Length()}");
 
-            l.RemoveFirst();
-            l.Display();
-            Console.WriteLine($"Size : {l.Length()}");
+            var key = 20;
+            Console.WriteLine($"{key} index is {l.Search(key)}");
 
-            l.RemoveLast();
-            l.Display();
-            Console.WriteLine($"Size : {l.Length()}");
+            //l.RemoveFirst();
+            //l.Display();
+            //Console.WriteLine($"Size : {l.Length()}");
 
-            l.RemoveAny(2);
-            l.Display();
-            Console.WriteLine($"Size : {l.Length()}");
+            //l.RemoveLast();
+            //l.Display();
+            //Console.WriteLine($"Size : {l.Length()}");
+
+            //l.RemoveAny(2);
+            //l.Display();
+            //Console.WriteLine($"Size : {l.Length()}");
 
 
 

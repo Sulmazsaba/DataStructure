@@ -155,6 +155,24 @@ namespace DataStructure.LinkedList
 
         }
 
+        public int Search(int key)
+        {
+            int index = 0;
+            var p = head;
+
+            while (index <= size - 1)
+            {
+                if (p.element == key)
+                    return index;
+
+                p = p.next;
+                index++;
+
+            }
+
+            return -1;
+        }
+
         public void Display()
         {
             Node p = head;
