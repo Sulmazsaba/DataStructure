@@ -45,6 +45,52 @@ namespace DataStructure.LinkedList.CircularLinkedList
             size++;
         }
 
+        public void AddFirst(int element)
+        {
+            var newest = new Node(element, null);
+            if (IsEmpty())
+            {
+                newest.next = newest;
+                head = newest;
+                tail = newest;
+            }
+            else
+            {
+                newest.next = head;
+                tail.next = newest;
+                head = newest;
+            }
+
+            size++;
+        }
+
+        public void AddAny(int element, int position)
+        {
+            if (position < 0 || position > size)
+            {
+                Console.WriteLine("Position is invalid");
+                return;
+            }
+            else
+            {
+                var newest = new Node(element, null);
+                var p = head;
+                var i = 1;
+                while (i<position-1)
+                {
+                    p = p.next;
+                    i++;
+                }
+
+                newest.next = p.next;
+                p.next = newest;
+
+                size++;
+
+
+            }
+        }
+
         public void Display()
         {
             var p = head;

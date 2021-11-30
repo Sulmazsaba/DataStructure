@@ -25,7 +25,10 @@ namespace DataStructure
             cirLL.AddLast(16);
             cirLL.AddLast(13);
             cirLL.Display();
-
+            cirLL.AddFirst(14);
+            cirLL.Display();
+            cirLL.AddAny(10,4);
+            cirLL.Display();
 
         }
 
