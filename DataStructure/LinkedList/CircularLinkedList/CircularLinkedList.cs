@@ -91,6 +91,27 @@ namespace DataStructure.LinkedList.CircularLinkedList
             }
         }
 
+        public int RemoveFirst()
+        {
+            var p = head;
+            if (IsEmpty())
+            {
+                Console.WriteLine("Linked List is Empty");
+                return -1;
+            }
+
+            var element = head.element;
+            tail.next = head.next;
+            head = head.next;
+            size--;
+            if (IsEmpty())
+            {
+                tail = null;
+                head = null;
+            }
+            return element;
+        }
+
         public void Display()
         {
             var p = head;

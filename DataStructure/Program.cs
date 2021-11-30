@@ -27,8 +27,11 @@ namespace DataStructure
             cirLL.Display();
             cirLL.AddFirst(14);
             cirLL.Display();
-            cirLL.AddAny(10,4);
+            cirLL.AddAny(10, 4);
             cirLL.Display();
+            Console.WriteLine($"removed value is { cirLL.RemoveFirst()}");
+            cirLL.Display();
+
 
         }
 
