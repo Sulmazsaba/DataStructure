@@ -76,7 +76,7 @@ namespace DataStructure.LinkedList.CircularLinkedList
                 var newest = new Node(element, null);
                 var p = head;
                 var i = 1;
-                while (i<position-1)
+                while (i < position - 1)
                 {
                     p = p.next;
                     i++;
@@ -109,6 +109,54 @@ namespace DataStructure.LinkedList.CircularLinkedList
                 tail = null;
                 head = null;
             }
+            return element;
+        }
+
+        public int RemoveLast()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("Linked List is Empty");
+                return -1;
+            }
+
+            var p = head;
+            var index = 1;
+            while (index < size - 1)
+            {
+                p = p.next;
+                index++;
+            }
+
+            var element = p.next.element;
+            p.next = head;
+            tail = p;
+            size--;
+
+            return element;
+
+        }
+
+        public int RemoveAny(int position)
+        {
+            if (position <= 0 || position >= size - 1)
+            {
+                Console.WriteLine("invalid position");
+                return -1;
+            }
+
+            var p = head;
+            var index = 1;
+            while (index < position - 1)
+            {
+                p = p.next;
+                index++;
+            }
+
+            var element = p.next.element;
+            p.next = p.next.next;
+
+            size--;
             return element;
         }
 

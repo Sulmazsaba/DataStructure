@@ -31,6 +31,10 @@ namespace DataStructure
             cirLL.Display();
             Console.WriteLine($"removed value is { cirLL.RemoveFirst()}");
             cirLL.Display();
+            Console.WriteLine($"removed value is { cirLL.RemoveLast()}");
+            cirLL.Display();
+            Console.WriteLine($"removed value is {cirLL.RemoveAny(3)}");
+            cirLL.Display();
 
 
         }
