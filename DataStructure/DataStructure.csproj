@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkedList\CircularLinkedList\CircularLinkedList.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\DoublyLinkedList.cs" />
+    <Compile Include="LinkedList\DoublyLinkedList\Node.cs" />
     <Compile Include="LinkedList\LinkedListNode.cs" />
     <Compile Include="LinkedList\Node.cs" />
     <Compile Include="Program.cs" />

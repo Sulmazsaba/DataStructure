@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
+using DataStructure.LinkedList.DoublyLinkedList;
 using DataStructure.Sorting;
 
 namespace DataStructure
@@ -15,7 +16,8 @@ namespace DataStructure
         {
             //TestCircularLinkedList();
 
-            Sorting();
+            //Sorting();
+            TestDoublyLinkedList();
 
             Console.ReadKey();
         }
@@ -87,6 +89,17 @@ namespace DataStructure
             //l.RemoveAny(2);
             //l.Display();
             //Console.WriteLine($"Size : {l.Length()}");
+
+        }
+
+        private static void TestDoublyLinkedList()
+        {
+            var l = new DoublyLinkedList();
+            l.AddLast(3);
+            l.AddLast(4);
+            l.Display();
+            l.AddFirst(5);
+            l.Display();
 
         }
     }
