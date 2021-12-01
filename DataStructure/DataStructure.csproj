@@ -48,8 +48,10 @@
     <Compile Include="LinkedList\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\Bubble.cs" />
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
+    <Compile Include="Sorting\Shell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

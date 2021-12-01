@@ -24,7 +24,9 @@ namespace DataStructure
         {
             int[] arr = {2, 5, 4, 8, 12, 1, 10, 19, 433, 5};
             //SelectionSort.Sort(arr,arr.Length);
-            Insertion.Sort(arr,arr.Length);
+            //Insertion.Sort(arr,arr.Length);
+            //Bubble.Sort(arr,arr.Length);
+            Shell.Sort(arr,arr.Length);
 
             foreach (var i in arr)
             {
