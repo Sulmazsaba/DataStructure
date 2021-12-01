@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
+using DataStructure.Sorting;
 
 namespace DataStructure
 {
@@ -12,9 +13,24 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            TestCircularLinkedList();
+            //TestCircularLinkedList();
+
+            Sorting();
 
             Console.ReadKey();
+        }
+
+        private static void Sorting()
+        {
+            int[] arr = {2, 5, 4, 8, 12, 1, 10, 19, 433, 5};
+            //SelectionSort.Sort(arr,arr.Length);
+            Insertion.Sort(arr,arr.Length);
+
+            foreach (var i in arr)
+            {
+                Console.Write(i+"-->");
+            }
+            Console.WriteLine();
         }
 
         private static void TestCircularLinkedList()
