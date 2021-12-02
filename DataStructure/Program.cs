@@ -24,15 +24,15 @@ namespace DataStructure
 
         private static void Sorting()
         {
-            int[] arr = {2, 5, 4, 8, 12, 1, 10, 19, 433, 5};
+            int[] arr = { 2, 5, 4, 8, 12, 1, 10, 19, 433, 5 };
             //SelectionSort.Sort(arr,arr.Length);
             //Insertion.Sort(arr,arr.Length);
             //Bubble.Sort(arr,arr.Length);
-            Shell.Sort(arr,arr.Length);
+            Shell.Sort(arr, arr.Length);
 
             foreach (var i in arr)
             {
-                Console.Write(i+"-->");
+                Console.Write(i + "-->");
             }
             Console.WriteLine();
         }
@@ -99,6 +99,10 @@ namespace DataStructure
             l.AddLast(4);
             l.Display();
             l.AddFirst(5);
+            l.Display();
+            l.AddAny(32, 2);
+            l.Display();
+            Console.WriteLine($"removed element :{l.RemoveFirst()}");
             l.Display();
 
         }

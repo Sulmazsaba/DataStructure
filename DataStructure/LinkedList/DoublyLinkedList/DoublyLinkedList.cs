@@ -68,6 +68,55 @@ namespace DataStructure.LinkedList.DoublyLinkedList
 
         }
 
+        public void AddAny(int element, int position)
+        {
+            if (position <= 0 || position >= size)
+            {
+                Console.Write("Position is not Valid");
+                return;
+            }
+
+            var newest = new Node(element, null, null);
+            var p = head;
+            var i = 1;
+            while (i < position - 1)
+            {
+                p = p.Next;
+                i++;
+            }
+
+            newest.Next = p.Next;
+            p.Next.Prev = newest;
+            newest.Prev = p;
+            p.Next = newest;
+            size++;
+        }
+
+        public int RemoveFirst()
+        {
+            if (IsEmpty())
+            {
+                Console.Write("list is empty");
+                return -1;
+            }
+
+            var e = head.Element;
+            head = head.Next;
+            size--;
+
+            if (IsEmpty())
+                tail = null;
+            else
+            {
+
+                head.Prev = null;
+            }
+
+
+            return e;
+
+        }
+
         public void Display()
         {
             var p = head;
