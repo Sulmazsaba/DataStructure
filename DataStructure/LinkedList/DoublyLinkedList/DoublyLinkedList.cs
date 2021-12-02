@@ -135,7 +135,7 @@ namespace DataStructure.LinkedList.DoublyLinkedList
 
         public int RemoveAny(int position)
         {
-            if (position <= 0 || position >= size)
+            if (position <= 0 || position >= size -1)
             {
                 Console.WriteLine("position is not correct");
                 return -1;

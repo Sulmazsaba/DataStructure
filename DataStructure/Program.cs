@@ -7,6 +7,7 @@ using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
 using DataStructure.LinkedList.DoublyLinkedList;
 using DataStructure.Sorting;
+using DataStructure.Stack;
 
 namespace DataStructure
 {
@@ -17,9 +18,23 @@ namespace DataStructure
             //TestCircularLinkedList();
 
             //Sorting();
-            TestDoublyLinkedList();
+            //TestDoublyLinkedList();
+            TestStack();
 
             Console.ReadKey();
+        }
+
+        private static void TestStack()
+        {
+            StacksArray stc = new StacksArray(6);
+            stc.Push(3);
+            stc.Push(12);
+            stc.Push(1);
+            stc.Display();
+            Console.WriteLine($"pop element : {stc.Pop()}");
+            stc.Display();
+            stc.Push(9);
+            stc.Display();
         }
 
         private static void Sorting()
@@ -109,6 +124,11 @@ namespace DataStructure
             Console.WriteLine($"removed element :{l.RemoveAny(2)}");
             l.Display();
 
+            //LinkedList<int> students = new LinkedList<int>()
+            //{
+            //    First = {  }
+            //}
+                
 
         }
     }

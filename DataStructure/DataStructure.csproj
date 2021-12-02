@@ -54,6 +54,7 @@
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
     <Compile Include="Sorting\Shell.cs" />
+    <Compile Include="Stack\StacksArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
