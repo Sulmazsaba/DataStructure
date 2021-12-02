@@ -117,6 +117,47 @@ namespace DataStructure.LinkedList.DoublyLinkedList
 
         }
 
+        public int RemoveLast()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("list is empty");
+                return -1;
+            }
+
+            var element = tail.Element;
+            tail = tail.Prev;
+            tail.Next = null;
+
+            size--;
+            return element;
+        }
+
+        public int RemoveAny(int position)
+        {
+            if (position <= 0 || position >= size)
+            {
+                Console.WriteLine("position is not correct");
+                return -1;
+            }
+
+            var p = head;
+            var index = 1;
+
+            while (index < position - 1)
+            {
+                p = p.Next;
+                index++;
+            }
+
+            var element = p.Next.Element;
+            p.Next = p.Next.Next;
+            p.Next.Prev = p;
+
+            size--;
+            return element;
+        }
+
         public void Display()
         {
             var p = head;

@@ -102,8 +102,13 @@ namespace DataStructure
             l.Display();
             l.AddAny(32, 2);
             l.Display();
-            Console.WriteLine($"removed element :{l.RemoveFirst()}");
+            //Console.WriteLine($"removed element :{l.RemoveFirst()}");
+            //l.Display();
+            //Console.WriteLine($"removed element :{l.RemoveLast()}");
+            //l.Display();
+            Console.WriteLine($"removed element :{l.RemoveAny(2)}");
             l.Display();
+
 
         }
     }
