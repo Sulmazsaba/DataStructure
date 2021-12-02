@@ -26,7 +26,8 @@ namespace DataStructure
 
         private static void TestStack()
         {
-            StacksArray stc = new StacksArray(6);
+            StacksLinkedList stc = new StacksLinkedList();
+            //StacksArray stc = new StacksArray(6);
             stc.Push(3);
             stc.Push(12);
             stc.Push(1);
