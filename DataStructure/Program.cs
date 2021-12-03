@@ -23,7 +23,9 @@ namespace DataStructure
             //TestDoublyLinkedList();
             //TestStack();
             //TestQueue();
-            Searching();
+            //Searching();
+            Recursion recursion = new Recursion();
+           Console.WriteLine(recursion.Factorial(0));
 
             Console.ReadKey();
         }
