@@ -30,9 +30,13 @@ namespace DataStructure
 
         private static void Searching()
         {
-            int[] arr = new[] {1, 5, 3, 9, 33, 8};
-            LinearSearch search = new LinearSearch();
-            Console.WriteLine(search.Search(arr,6,1));
+            int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
+            int[] sortedArr = new[] { 1, 2, 4, 6, 10, 16, 22 };
+            //LinearSearch search = new LinearSearch();
+            BinarySearch search = new BinarySearch();
+            //Console.WriteLine(search.Search(sortedArr, 7, 9));
+            //Console.WriteLine(search.Search(sortedArr, 7, 10));
+            Console.WriteLine(search.RecSearch(sortedArr,0,sortedArr.Length,16));
         }
 
         private static void TestQueue()
