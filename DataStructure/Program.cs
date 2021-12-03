@@ -28,7 +28,8 @@ namespace DataStructure
 
         private static void TestQueue()
         {
-            QueuesArray que = new QueuesArray(5);
+            QueuesLinkedList que = new QueuesLinkedList();
+            //QueuesArray que = new QueuesArray(5);
             que.Enqueue(5);
             que.Enqueue(10);
             que.Enqueue(15);
@@ -36,7 +37,7 @@ namespace DataStructure
             que.Display();
             que.Dequeue();
             que.Display();
-            
+
         }
 
         private static void TestStack()

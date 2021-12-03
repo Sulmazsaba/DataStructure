@@ -51,6 +51,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queues\QueuesArray.cs" />
+    <Compile Include="Queues\QueuesLinkedList.cs" />
     <Compile Include="Sorting\Bubble.cs" />
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
