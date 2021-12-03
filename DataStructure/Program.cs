@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
 using DataStructure.LinkedList.DoublyLinkedList;
+using DataStructure.Queues;
 using DataStructure.Sorting;
 using DataStructure.Stack;
 
@@ -19,9 +20,23 @@ namespace DataStructure
 
             //Sorting();
             //TestDoublyLinkedList();
-            TestStack();
+            //TestStack();
+            TestQueue();
 
             Console.ReadKey();
+        }
+
+        private static void TestQueue()
+        {
+            QueuesArray que = new QueuesArray(5);
+            que.Enqueue(5);
+            que.Enqueue(10);
+            que.Enqueue(15);
+            que.Enqueue(2);
+            que.Display();
+            que.Dequeue();
+            que.Display();
+            
         }
 
         private static void TestStack()
@@ -129,7 +144,7 @@ namespace DataStructure
             //{
             //    First = {  }
             //}
-                
+
 
         }
     }
