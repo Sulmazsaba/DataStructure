@@ -7,6 +7,7 @@ using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
 using DataStructure.LinkedList.DoublyLinkedList;
 using DataStructure.Queues;
+using DataStructure.Searching;
 using DataStructure.Sorting;
 using DataStructure.Stack;
 
@@ -21,9 +22,17 @@ namespace DataStructure
             //Sorting();
             //TestDoublyLinkedList();
             //TestStack();
-            TestQueue();
+            //TestQueue();
+            Searching();
 
             Console.ReadKey();
+        }
+
+        private static void Searching()
+        {
+            int[] arr = new[] {1, 5, 3, 9, 33, 8};
+            LinearSearch search = new LinearSearch();
+            Console.WriteLine(search.Search(arr,6,1));
         }
 
         private static void TestQueue()
