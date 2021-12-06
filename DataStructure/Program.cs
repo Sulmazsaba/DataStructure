@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataStructure.HashTableSolutions;
 using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
 using DataStructure.LinkedList.DoublyLinkedList;
@@ -24,8 +25,11 @@ namespace DataStructure
             //TestStack();
             //TestQueue();
             //Searching();
-            Recursion recursion = new Recursion();
-           Console.WriteLine(recursion.Factorial(0));
+            //Recursion recursion = new Recursion();
+            //Console.WriteLine(recursion.Factorial(0));
+
+            var statement = "Hi This is ALi".ToCharArray();
+            Console.WriteLine(Problems.GetFirstRepeatedChar(statement));
 
             Console.ReadKey();
         }
@@ -38,7 +42,7 @@ namespace DataStructure
             BinarySearch search = new BinarySearch();
             //Console.WriteLine(search.Search(sortedArr, 7, 9));
             //Console.WriteLine(search.Search(sortedArr, 7, 10));
-            Console.WriteLine(search.RecSearch(sortedArr,0,sortedArr.Length,16));
+            Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 16));
         }
 
         private static void TestQueue()
