@@ -79,5 +79,20 @@ namespace DataStructure.TreeSolutions
                 RightChild = rightChild;
             }
         }
+
+        public void TraversePreOrder()
+        {
+            TraversePreOrder(Root);
+        }
+        private void TraversePreOrder(Node root)
+        {
+            if(root==null)
+                return;
+            
+            Console.WriteLine(root.Value);
+            TraversePreOrder(root.LeftChild);
+            TraversePreOrder(root.RightChild);
+
+        }
     }
 }

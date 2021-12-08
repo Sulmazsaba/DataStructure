@@ -44,8 +44,9 @@ namespace DataStructure
             tree.Insert(1);
             tree.Insert(15);
             tree.Insert(6);
-            
-            Console.WriteLine(tree.Find(1));
+           Console.WriteLine($"Pre-Order Traversal : ");
+           tree.TraversePreOrder();
+           //Console.WriteLine(tree.Find(1));
         }
 
         private static void TestHeapify()
