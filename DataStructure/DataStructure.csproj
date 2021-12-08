@@ -69,6 +69,7 @@
     <Compile Include="Sorting\Shell.cs" />
     <Compile Include="Stack\StacksArray.cs" />
     <Compile Include="Stack\StacksLinkedList.cs" />
+    <Compile Include="TreeSolutions\Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

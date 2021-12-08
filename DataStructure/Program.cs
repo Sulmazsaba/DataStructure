@@ -12,6 +12,7 @@ using DataStructure.Queues;
 using DataStructure.Searching;
 using DataStructure.Sorting;
 using DataStructure.Stack;
+using DataStructure.TreeSolutions;
 
 namespace DataStructure
 {
@@ -30,8 +31,21 @@ namespace DataStructure
             //TestHashTable();
             //TestHeap();
             //HeapSort();
-            TestHeapify();
+            //TestHeapify();
+            TestTree();
             Console.ReadKey();
+        }
+
+        private static void TestTree()
+        {
+            Tree tree = new Tree();
+            tree.Insert(4);
+            tree.Insert(10);
+            tree.Insert(1);
+            tree.Insert(15);
+            tree.Insert(6);
+            
+            Console.WriteLine(tree.Find(1));
         }
 
         private static void TestHeapify()
