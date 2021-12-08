@@ -56,7 +56,7 @@ namespace DataStructure.HeapSolutions
             }
         }
 
-     
+
 
         private int LargerChildIndex(int index)
         {
@@ -74,10 +74,10 @@ namespace DataStructure.HeapSolutions
 
             var isValid = items[index] >= LeftChild(index);
             if (HasRightChild(index))
-                return isValid &items[index] >= RightChild(index);
+                return isValid & items[index] >= RightChild(index);
 
             return isValid;
-        } 
+        }
         private bool HasLeftChild(int index) => LeftChildIndex(index) <= size;
         private bool HasRightChild(int index) => RightChildIndex(index) <= size;
         private int LeftChild(int index) => items[LeftChildIndex(index)];
@@ -87,6 +87,12 @@ namespace DataStructure.HeapSolutions
         private int Parent(int index) => (index - 1) / 2;
         private void Swap(int first, int second) => (items[first], items[second]) = (items[second], items[first]);
 
+        public int Max()
+        {
+            if (IsEmpty)
+                throw new InvalidOperationException();
+            return items[0];
+        }
         private bool IsFull => size == items.Length;
         public bool IsEmpty => size == 0;
     }
