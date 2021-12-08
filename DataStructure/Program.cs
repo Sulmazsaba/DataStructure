@@ -28,9 +28,43 @@ namespace DataStructure
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
             //TestHashTable();
-
-            TestHeap();
+            //TestHeap();
+            //HeapSort();
+            TestHeapify();
             Console.ReadKey();
+        }
+
+        private static void TestHeapify()
+        {
+        
+            int[] numbers = { 4, 2, 6, 22, 3, 99, 100, 1, 55, 23 };
+            Console.Write(String.Join(",", numbers));
+            Console.WriteLine();
+            MaxHeap.Heapify(numbers);
+            Console.Write(String.Join(",",numbers));
+
+        }
+
+        private static void HeapSort()
+        {
+            var heap = new Heap();
+            int[] numbers = { 1, 10, 32, 5, 4, 76, 82, 12, 9, 7 };
+            foreach (var number in numbers)
+            {
+                heap.Insert(number);
+            }
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    numbers[i] = heap.Remove();
+            //}
+
+            for (int i = numbers.Length - 1; i >= 0; i--)
+            {
+                numbers[i] = heap.Remove();
+            }
+            Console.Write(string.Join(",", numbers));
+
         }
 
         public static void TestHeap()
@@ -41,8 +75,8 @@ namespace DataStructure
             heap.Insert(11);
             heap.Insert(4);
             heap.Insert(22);
-            heap.Remove();
-            Console.WriteLine("Done");
+            var removedItem = heap.Remove();
+            Console.WriteLine(removedItem);
         }
 
         private static void TestHashTable()
@@ -52,10 +86,10 @@ namespace DataStructure
             //Console.WriteLine(Problems.GetFirstRepeatedChar(statement));
 
             var table = new HashTable();
-            table.Put(4,"Saba");
-            table.Put(3,"Lagha");
-            table.Put(12,"Sohrab");
-            table.Put(4,"SS");
+            table.Put(4, "Saba");
+            table.Put(3, "Lagha");
+            table.Put(12, "Sohrab");
+            table.Put(4, "SS");
             table.Remove(12);
             Console.WriteLine(table.Get(4));
         }

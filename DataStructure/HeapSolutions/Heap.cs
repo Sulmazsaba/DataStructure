@@ -11,6 +11,7 @@ namespace DataStructure.HeapSolutions
         private int size = 0;
         private int[] items = new int[10];
 
+
         public void Insert(int value)
         {
             if (IsFull)
@@ -19,14 +20,17 @@ namespace DataStructure.HeapSolutions
             BubbleUp();
         }
 
-        public void Remove()
+        public int Remove()
         {
             if (IsEmpty)
                 throw new InvalidOperationException();
 
+            var root = items[0];
             items[0] = items[--size];
 
             BubbleDown();
+
+            return root;
         }
 
         private void BubbleUp()
@@ -52,10 +56,30 @@ namespace DataStructure.HeapSolutions
             }
         }
 
-        private int LargerChildIndex(int index) =>
-            (LeftChild(index) > RightChild(index)) ? LeftChildIndex(index) : RightChildIndex(index);
-        private bool IsValidParent(int index) => items[index] >= LeftChild(index) && items[index] >= RightChild(index);
-        //private bool HasLeftChild
+     
+
+        private int LargerChildIndex(int index)
+        {
+            if (!HasLeftChild(index))
+                return index;
+            if (!HasRightChild(index))
+                return LeftChildIndex(index);
+
+            return (LeftChild(index) > RightChild(index)) ? LeftChildIndex(index) : RightChildIndex(index);
+        }
+        private bool IsValidParent(int index)
+        {
+            if (!HasLeftChild(index))
+                return true;
+
+            var isValid = items[index] >= LeftChild(index);
+            if (HasRightChild(index))
+                return isValid &items[index] >= RightChild(index);
+
+            return isValid;
+        } 
+        private bool HasLeftChild(int index) => LeftChildIndex(index) <= size;
+        private bool HasRightChild(int index) => RightChildIndex(index) <= size;
         private int LeftChild(int index) => items[LeftChildIndex(index)];
         private int RightChild(int index) => items[RightChildIndex(index)];
         private int LeftChildIndex(int parent) => parent * 2 + 1;
@@ -64,6 +88,6 @@ namespace DataStructure.HeapSolutions
         private void Swap(int first, int second) => (items[first], items[second]) = (items[second], items[first]);
 
         private bool IsFull => size == items.Length;
-        private bool IsEmpty => size == 0;
+        public bool IsEmpty => size == 0;
     }
 }
