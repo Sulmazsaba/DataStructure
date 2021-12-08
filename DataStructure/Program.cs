@@ -44,9 +44,24 @@ namespace DataStructure
             tree.Insert(1);
             tree.Insert(15);
             tree.Insert(6);
-           Console.WriteLine($"Pre-Order Traversal : ");
-           tree.TraversePreOrder();
-           //Console.WriteLine(tree.Find(1));
+
+            Tree tree2 = new Tree();
+            tree2.Insert(4);
+            tree2.Insert(10);
+            tree2.Insert(1);
+            tree2.Insert(15);
+            //tree2.Insert(6);
+
+            //Console.WriteLine($"Pre-Order Traversal : ");
+            //tree.TraversePreOrder();
+
+            //Console.WriteLine(tree.Height());
+            //Console.WriteLine(tree.Find(1));
+            //Console.WriteLine(tree.MinValue());
+
+            //Console.WriteLine(tree.Equals(tree2));
+            //Console.WriteLine(tree.IsBinarySearchTree());
+            tree.GetNodeAtDistance(1);
         }
 
         private static void TestHeapify()
