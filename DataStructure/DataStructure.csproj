@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="HashTableSolutions\HashTable.cs" />
     <Compile Include="HashTableSolutions\Problems.cs" />
+    <Compile Include="HeapSolutions\Heap.cs" />
     <Compile Include="LinkedList\CircularLinkedList\CircularLinkedList.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\DoublyLinkedList.cs" />
     <Compile Include="LinkedList\DoublyLinkedList\Node.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Searching\BinarySearch.cs" />
     <Compile Include="Searching\LinearSearch.cs" />
     <Compile Include="Sorting\Bubble.cs" />
+    <Compile Include="Sorting\BucketSort.cs" />
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
     <Compile Include="Sorting\Shell.cs" />

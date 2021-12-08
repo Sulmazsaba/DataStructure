@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataStructure.HashTableSolutions;
+using DataStructure.HeapSolutions;
 using DataStructure.LinkedList;
 using DataStructure.LinkedList.CircularLinkedList;
 using DataStructure.LinkedList.DoublyLinkedList;
@@ -19,7 +20,6 @@ namespace DataStructure
         static void Main(string[] args)
         {
             //TestCircularLinkedList();
-
             //Sorting();
             //TestDoublyLinkedList();
             //TestStack();
@@ -27,9 +27,22 @@ namespace DataStructure
             //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
-            TestHashTable();
+            //TestHashTable();
 
+            TestHeap();
             Console.ReadKey();
+        }
+
+        public static void TestHeap()
+        {
+            var heap = new Heap();
+            heap.Insert(10);
+            heap.Insert(2);
+            heap.Insert(11);
+            heap.Insert(4);
+            heap.Insert(22);
+            heap.Remove();
+            Console.WriteLine("Done");
         }
 
         private static void TestHashTable()
