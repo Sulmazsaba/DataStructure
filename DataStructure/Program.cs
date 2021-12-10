@@ -44,8 +44,19 @@ namespace DataStructure
             Trie trie = new Trie();
             trie.Insert("canada");
             trie.Insert("can");
-            Console.WriteLine(trie.Contains("can"));
-            Console.WriteLine("");
+            trie.Insert("car");
+            trie.Insert("cancer");
+            //trie.Insert("cardinal");
+            //trie.Insert("care");
+            //trie.Insert("car");
+            //Console.WriteLine(trie.Contains("can"));
+            //trie.Traverse();
+            //trie.Remove("canada");
+            //trie.Traverse();
+
+
+            var list = trie.FindWords("can");
+            Console.WriteLine(list.Count);
         }
         private static void TestAVLTree()
         {
