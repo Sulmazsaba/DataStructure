@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphsSolutions\Graph.cs" />
     <Compile Include="HashTableSolutions\HashTable.cs" />
     <Compile Include="HashTableSolutions\Problems.cs" />
     <Compile Include="HeapSolutions\Heap.cs" />
