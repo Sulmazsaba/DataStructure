@@ -37,8 +37,20 @@ namespace DataStructure
             //TestTree();
             //TestAVLTree();
             //TestTrie();
-            TestGraph();
+            //TestGraph();
+            TestDirectedGraph();
             Console.ReadKey();
+        }
+
+        private static void TestDirectedGraph()
+        {
+            WeightedGraph graph = new WeightedGraph();
+            graph.AddNode("A");
+            graph.AddNode("B");
+            graph.AddNode("S");
+            graph.AddNode("M");
+            graph.AddEdge("M","S",10);
+            graph.Print();
         }
 
         private static void TestGraph()
