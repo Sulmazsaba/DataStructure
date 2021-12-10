@@ -13,6 +13,7 @@ using DataStructure.Searching;
 using DataStructure.Sorting;
 using DataStructure.Stack;
 using DataStructure.TreeSolutions;
+using DataStructure.TriesSolution;
 
 namespace DataStructure
 {
@@ -25,15 +26,34 @@ namespace DataStructure
             //TestDoublyLinkedList();
             //TestStack();
             //TestQueue();
-            //Searching();
+            ////Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
             //TestHashTable();
             //TestHeap();
             //HeapSort();
             //TestHeapify();
-            TestTree();
+            //TestTree();
+            //TestAVLTree();
+            TestTrie();
             Console.ReadKey();
+        }
+
+        private static void TestTrie()
+        {
+            Trie trie = new Trie();
+            trie.Insert("canada");
+            trie.Insert("can");
+            Console.WriteLine(trie.Contains("can"));
+            Console.WriteLine("");
+        }
+        private static void TestAVLTree()
+        {
+            AVLTree avlTree = new AVLTree();
+            avlTree.Insert(1);
+            avlTree.Insert(2);
+            avlTree.Insert(3);
+            Console.WriteLine();
         }
 
         private static void TestTree()
@@ -66,12 +86,12 @@ namespace DataStructure
 
         private static void TestHeapify()
         {
-        
+
             int[] numbers = { 4, 2, 6, 22, 3, 99, 100, 1, 55, 23 };
             Console.Write(String.Join(",", numbers));
             Console.WriteLine();
             MaxHeap.Heapify(numbers);
-            Console.Write(String.Join(",",numbers));
+            Console.Write(String.Join(",", numbers));
 
         }
 
@@ -126,12 +146,12 @@ namespace DataStructure
         private static void Searching()
         {
             int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
-            int[] sortedArr = new[] { 1, 2, 4, 6, 10, 16, 22 };
+            int[] sortedArr = new[] { 1, 2, 4, 6, 10 };
             //LinearSearch search = new LinearSearch();
             BinarySearch search = new BinarySearch();
             //Console.WriteLine(search.Search(sortedArr, 7, 9));
             //Console.WriteLine(search.Search(sortedArr, 7, 10));
-            Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 16));
+            Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
         }
 
         private static void TestQueue()
