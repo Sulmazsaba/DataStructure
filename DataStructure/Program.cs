@@ -47,9 +47,12 @@ namespace DataStructure
             WeightedGraph graph = new WeightedGraph();
             graph.AddNode("A");
             graph.AddNode("B");
-            graph.AddNode("S");
-            graph.AddNode("M");
-            graph.AddEdge("M","S",10);
+            graph.AddNode("C");
+            graph.AddNode("D");
+            graph.AddEdge("A","B",2);
+            graph.AddEdge("B","C",3);
+            //graph.AddEdge("C","A",10);
+            Console.WriteLine(graph.HasCycle());
             graph.Print();
         }
 
