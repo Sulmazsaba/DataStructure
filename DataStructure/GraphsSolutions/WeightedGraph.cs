@@ -114,6 +114,35 @@ namespace DataStructure.GraphsSolutions
             return false;
         }
 
+        public WeightedGraph GetMinSpanningTree()
+        {
+            var tree = new WeightedGraph();
+            PriorityQueue<Edge> edges = new PriorityQueue<Edge>(new EdgeComparer());
+
+           var first = _nodes.Values.FirstOrDefault();
+           foreach (var edge in first.GetEdges()) edges.Enqueue(edge);
+
+           tree.AddNode(first.label);
+
+           while (tree._nodes.Count<_nodes.Count)
+           {
+               var minEdge = edges.Dequeue();
+               var nextNode = minEdge.to;
+               if(tree.ContainsNode(nextNode.label))
+                   continue;
+               tree.AddNode(nextNode.label);
+               tree.AddEdge(minEdge.@from.label,minEdge.to.label,minEdge.weight);
+               foreach (var edge in nextNode.GetEdges())
+               {
+                   if(!tree.ContainsNode(edge.to.label))
+                       edges.Enqueue(edge);
+               }
+           }
+
+           return tree;
+        }
+
+        public bool ContainsNode(string label) => _nodes.ContainsKey(label);
         private class NodeEntry
         {
             internal Node node;
@@ -151,7 +180,7 @@ namespace DataStructure.GraphsSolutions
         private class Edge
         {
             internal int weight;
-            private Node from;
+            internal Node from;
             internal Node to;
 
             public Edge(int weight, Node @from, Node to)
@@ -170,6 +199,17 @@ namespace DataStructure.GraphsSolutions
         private class NodeComparer : IComparer<NodeEntry>
         {
             public int Compare(NodeEntry x, NodeEntry y) => y.priority - x.priority;
+        }
+
+        private class EdgeComparer : IComparer<Edge>
+        {
+            public int Compare(Edge x, Edge y)
+            {
+                if (ReferenceEquals(x, y)) return 0;
+                if (ReferenceEquals(null, y)) return 1;
+                if (ReferenceEquals(null, x)) return -1;
+                return x.weight.CompareTo(y.weight);
+            }
         }
     }
 }

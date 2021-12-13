@@ -51,7 +51,8 @@ namespace DataStructure
             graph.AddNode("D");
             graph.AddEdge("A","B",2);
             graph.AddEdge("B","C",3);
-            //graph.AddEdge("C","A",10);
+            graph.AddEdge("C", "A", 10);
+            Console.WriteLine(graph.GetShortestDistance("A","C"));
             Console.WriteLine(graph.HasCycle());
             graph.Print();
         }
