@@ -235,13 +235,14 @@ namespace DataStructure
 
         private static void Sorting()
         {
-            int[] arr = { 2, 5, 4, 8, 12, 1, 10, 19, 433 };
+            int[] arr = { 2, 5, 4, 8, 12, 1, 10, 19 };
             //SelectionSort.Sort(arr,arr.Length);
             //Insertion.Sort(arr,arr.Length);
-            Bubble.Sort(arr);
+            //Bubble.Sort(arr);
+           var arr3 =  MergeSort.Sort(arr.ToList());
             //Shell.Sort(arr, arr.Length);
 
-            foreach (var i in arr)
+            foreach (var i in arr3)
             {
                 Console.Write(i + "-->");
             }

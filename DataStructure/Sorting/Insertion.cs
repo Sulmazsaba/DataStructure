@@ -13,16 +13,17 @@ namespace DataStructure.Sorting
         {
             for (int i = 1; i < n; i++)
             {
-                var cValue = a[i];
+                var current = a[i];
                 var position = i;
-                while (position >0 && a[position - 1] > cValue)
+                while (position >0 && a[position - 1] > current)
                 {
                     a[position] = a[position - 1];
                     position--;
                 }
 
-                a[position] = cValue;
+                a[position] = current;
             }
         }
+        
     }
 }
