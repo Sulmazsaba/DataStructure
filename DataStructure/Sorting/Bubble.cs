@@ -20,5 +20,22 @@ namespace DataStructure.Sorting
             }
         }
 
+        public static void Sort(int[] array)
+        {
+            for (var i = 0; i < array.Length; i++)
+            {
+                for (var j = 1; j < array.Length - i; j++)
+                {
+                    if (array[j - 1] > array[j])
+                    {
+                        (array[j], array[j - 1]) = (array[j - 1], array[j]);
+                    }
+
+                }
+            }
+
+        }
+
+
     }
 }

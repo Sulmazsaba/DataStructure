@@ -14,17 +14,17 @@ namespace DataStructure.Sorting
         {
             for (var i = 0; i < n - 1; i++)
             {
-                var position = i;
+                var minIndex = i;
                 for (var j = i + 1; j < n; j++)
                 {
-                    if (a[position] > a[j])
+                    if (a[minIndex] > a[j])
                     {
-                        position = j;
+                        minIndex = j;
 
                     }
                 }
 
-                (a[i], a[position]) = (a[position], a[i]);
+                (a[i], a[minIndex]) = (a[minIndex], a[i]);
             }
 
         }
