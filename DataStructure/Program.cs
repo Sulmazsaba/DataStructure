@@ -49,10 +49,10 @@ namespace DataStructure
             graph.AddNode("B");
             graph.AddNode("C");
             graph.AddNode("D");
-            graph.AddEdge("A","B",2);
-            graph.AddEdge("B","C",3);
+            graph.AddEdge("A", "B", 2);
+            graph.AddEdge("B", "C", 3);
             graph.AddEdge("C", "A", 10);
-            Console.WriteLine(graph.GetShortestDistance("A","C"));
+            Console.WriteLine(graph.GetShortestDistance("A", "C"));
             Console.WriteLine(graph.HasCycle());
             graph.Print();
         }
@@ -62,7 +62,7 @@ namespace DataStructure
             Graph graph = new Graph();
             graph.AddNode("A");
             graph.AddNode("B");
-            graph.AddEdge("A","B");
+            graph.AddEdge("A", "B");
             graph.AddNode("C");
             //graph.AddEdge("C","A");
             graph.AddNode("D");
@@ -239,10 +239,10 @@ namespace DataStructure
             //SelectionSort.Sort(arr,arr.Length);
             //Insertion.Sort(arr,arr.Length);
             //Bubble.Sort(arr);
-           var arr3 =  MergeSort.Sort(arr.ToList());
+            //var arr3 =  MergeSort.Sort(arr.ToList());
             //Shell.Sort(arr, arr.Length);
-
-            foreach (var i in arr3)
+            QuickSort.Sort(arr,0,arr.Length-1);
+            foreach (var i in arr)
             {
                 Console.Write(i + "-->");
             }
