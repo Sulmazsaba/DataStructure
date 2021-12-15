@@ -111,6 +111,7 @@
     <Compile Include="Searching\LinearSearch.cs" />
     <Compile Include="Sorting\Bubble.cs" />
     <Compile Include="Sorting\BucketSort.cs" />
+    <Compile Include="Sorting\Counting.cs" />
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
