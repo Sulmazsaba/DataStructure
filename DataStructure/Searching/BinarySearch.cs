@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataStructure.Searching
 {
-    public class BinarySearch
+    public static class BinarySearch
     {
-        public int Search(int[] arr, int n, int key)
+        public static int Search(int[] arr, int n, int key)
         {
             var l = 0;
             var r = n - 1;
@@ -27,7 +27,7 @@ namespace DataStructure.Searching
             return -1;
         }
 
-        public int RecSearch(int[] arr,int left, int right, int key)
+        public static int RecSearch(int[] arr,int left, int right, int key)
         {
             if (left < right)
             {

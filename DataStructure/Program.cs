@@ -204,7 +204,8 @@ namespace DataStructure
             //Console.WriteLine(search.Search(sortedArr, 7, 10));
             //Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
             //var index = TernarySearch.Search(sortedArr, 0, sortedArr.Length - 1, 506);
-            var index = JumpSearch.Search(sortedArr, 413);
+            //var index = JumpSearch.Search(sortedArr, 413);
+            var index = ExponentialSearch.Search(sortedArr, 543);
             Console.WriteLine(index);
 
         }
