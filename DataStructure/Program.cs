@@ -197,13 +197,14 @@ namespace DataStructure
         private static void Searching()
         {
             int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
-            int[] sortedArr = new[] { 1, 2, 4, 6, 10,313,413,490,501,506,543,566,576 };
+            int[] sortedArr = new[] { 1, 2, 4, 6, 10, 313, 413, 490, 501, 506, 543, 566, 576 };
             //LinearSearch search = new LinearSearch();
             //BinarySearch search = new BinarySearch();
             //Console.WriteLine(search.Search(sortedArr, 7, 9));
             //Console.WriteLine(search.Search(sortedArr, 7, 10));
             //Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
-            var index = TernarySearch.Search(sortedArr, 0, sortedArr.Length - 1, 506);
+            //var index = TernarySearch.Search(sortedArr, 0, sortedArr.Length - 1, 506);
+            var index = JumpSearch.Search(sortedArr, 413);
             Console.WriteLine(index);
 
         }
@@ -238,7 +239,7 @@ namespace DataStructure
 
         private static void Sorting()
         {
-            int[] arr = { 2, 5, 4, 8, 12, 1, 10 ,11,10,10,10};
+            int[] arr = { 2, 5, 4, 8, 12, 1, 10, 11, 10, 10, 10 };
             //SelectionSort.Sort(arr,arr.Length);
             //Insertion.Sort(arr,arr.Length);
             //Bubble.Sort(arr);
