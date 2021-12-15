@@ -108,7 +108,10 @@
     <Compile Include="Queues\QueuesLinkedList.cs" />
     <Compile Include="Recursion.cs" />
     <Compile Include="Searching\BinarySearch.cs" />
+    <Compile Include="Searching\ExponentialSearch.cs" />
+    <Compile Include="Searching\JumpSearch.cs" />
     <Compile Include="Searching\LinearSearch.cs" />
+    <Compile Include="Searching\TernarySearch.cs" />
     <Compile Include="Sorting\Bubble.cs" />
     <Compile Include="Sorting\BucketSort.cs" />
     <Compile Include="Sorting\Counting.cs" />

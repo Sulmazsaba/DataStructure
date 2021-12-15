@@ -23,11 +23,11 @@ namespace DataStructure
         static void Main(string[] args)
         {
             //TestCircularLinkedList();
-            Sorting();
+            //Sorting();
             //TestDoublyLinkedList();
             //TestStack();
             //TestQueue();
-            ////Searching();
+            Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
             //TestHashTable();
@@ -197,12 +197,15 @@ namespace DataStructure
         private static void Searching()
         {
             int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
-            int[] sortedArr = new[] { 1, 2, 4, 6, 10 };
+            int[] sortedArr = new[] { 1, 2, 4, 6, 10,313,413,490,501,506,543,566,576 };
             //LinearSearch search = new LinearSearch();
-            BinarySearch search = new BinarySearch();
+            //BinarySearch search = new BinarySearch();
             //Console.WriteLine(search.Search(sortedArr, 7, 9));
             //Console.WriteLine(search.Search(sortedArr, 7, 10));
-            Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
+            //Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
+            var index = TernarySearch.Search(sortedArr, 0, sortedArr.Length - 1, 506);
+            Console.WriteLine(index);
+
         }
 
         private static void TestQueue()
@@ -243,7 +246,7 @@ namespace DataStructure
             //Shell.Sort(arr, arr.Length);
             //QuickSort.Sort(arr,0,arr.Length-1);
             //Counting.Sort(arr,19);
-            BucketSort.Sort(arr,4);
+            //BucketSort.Sort(arr,4);
             foreach (var i in arr)
             {
                 Console.Write(i + "-->");
