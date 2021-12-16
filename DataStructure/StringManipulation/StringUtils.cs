@@ -21,12 +21,12 @@ namespace DataStructure.StringManipulation
         public static string ReverseWords(string sentence)
         {
             string[] words = sentence.Split(' ');
-            
+
             return string.Join(" ", words.Reverse());
         }
 
         public static bool IsRotated(string first, string second) =>
-            (first.Length == second.Length) && (first+first).Contains(second);
+            (first.Length == second.Length) && (first + first).Contains(second);
 
         public static void RemoveDuplicateChar(ref string word)
         {
@@ -52,7 +52,38 @@ namespace DataStructure.StringManipulation
                     dictionary[c] = 1;
             }
 
-            return dictionary.OrderByDescending(i=>i.Value).First().Key;
+            return dictionary.OrderByDescending(i => i.Value).First().Key;
+        }
+
+        public static string Capitalize(string sentence)
+        {
+            if (string.IsNullOrEmpty(sentence))
+                return "";
+
+
+            var words = sentence.Trim().Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].Substring(0, 1).ToUpper() + words[i].Substring(1).ToLower();
+            }
+
+            return string.Join(" ", words);
+        }
+
+        public static bool AreAnagrams(string value1,string value2)
+        {
+            var array1 = value1.ToLower().ToCharArray();
+            Array.Sort(array1);
+            var array2 = value2.ToLower().ToCharArray();
+            Array.Sort(array2);
+
+            return array1.SequenceEqual(array2);
+
+        }
+
+        public static bool ArePalindrome(string value)
+        {
+            return value == String.Join("", value.Reverse());
         }
     }
 }

@@ -52,7 +52,10 @@ namespace DataStructure
             //Console.WriteLine(StringUtils.ReverseWords(word));
             //Console.WriteLine(StringUtils.IsRotated("ABCD","BCDD"));
             //StringUtils.RemoveDuplicateChar(ref word);
-            Console.WriteLine(StringUtils.GetMostRepeatedChar("thisismemyfriends"));
+            //Console.WriteLine(StringUtils.GetMostRepeatedChar("thisismemyfriends"));
+            //Console.WriteLine(StringUtils.Capitalize(word));
+            //Console.WriteLine(StringUtils.AreAnagrams("SABa","BASA"));
+            Console.WriteLine(StringUtils.ArePalindrome("ABBAS"));
         }
         private static void TestDirectedGraph()
         {
