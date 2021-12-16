@@ -13,6 +13,7 @@ using DataStructure.Queues;
 using DataStructure.Searching;
 using DataStructure.Sorting;
 using DataStructure.Stack;
+using DataStructure.StringManipulation;
 using DataStructure.TreeSolutions;
 using DataStructure.TriesSolution;
 
@@ -27,7 +28,7 @@ namespace DataStructure
             //TestDoublyLinkedList();
             //TestStack();
             //TestQueue();
-            Searching();
+            //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
             //TestHashTable();
@@ -39,9 +40,20 @@ namespace DataStructure
             //TestTrie();
             //TestGraph();
             //TestDirectedGraph();
+            StringManipulation();
             Console.ReadKey();
         }
 
+        private static void StringManipulation()
+        {
+            string word = "this is my world";
+            //Console.WriteLine(StringUtils.CountVowels(word));
+            //Console.WriteLine(StringUtils.Reverse("hello"));
+            //Console.WriteLine(StringUtils.ReverseWords(word));
+            //Console.WriteLine(StringUtils.IsRotated("ABCD","BCDD"));
+            //StringUtils.RemoveDuplicateChar(ref word);
+            Console.WriteLine(StringUtils.GetMostRepeatedChar("thisismemyfriends"));
+        }
         private static void TestDirectedGraph()
         {
             WeightedGraph graph = new WeightedGraph();
