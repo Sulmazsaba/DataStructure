@@ -62,14 +62,15 @@ namespace DataStructure.Stack
             }
         }
 
-        public void Display()
+        public string Display()
         {
+            var result = "";
             for (int i = 0; i < top; i++)
             {
-                Console.Write(data[i] +"-->");
+                result += $"{data[i]}=>";
             }
 
-            Console.WriteLine();
+           return result;
         }
         public int Peek()
         {

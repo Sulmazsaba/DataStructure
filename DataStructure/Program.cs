@@ -26,7 +26,6 @@ namespace DataStructure
             //TestCircularLinkedList();
             //Sorting();
             //TestDoublyLinkedList();
-            //TestStack();
             //TestQueue();
             //Searching();
             //Recursion recursion = new Recursion();
@@ -216,19 +215,6 @@ namespace DataStructure
 
         }
 
-        private static void TestStack()
-        {
-            StacksLinkedList stc = new StacksLinkedList();
-            //StacksArray stc = new StacksArray(6);
-            stc.Push(3);
-            stc.Push(12);
-            stc.Push(1);
-            stc.Display();
-            Console.WriteLine($"pop element : {stc.Pop()}");
-            stc.Display();
-            stc.Push(9);
-            stc.Display();
-        }
 
         private static void Sorting()
         {

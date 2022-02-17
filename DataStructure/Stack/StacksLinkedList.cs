@@ -67,15 +67,17 @@ namespace DataStructure.Stack
 
             return top.element;
         }
-        public void Display()
+        public string Display()
         {
+            var result = "";
             Node p = top;
             while (p != null)
             {
-                Console.Write(p.element + " --> ");
+                result += $"{p.element}=>";
+
                 p = p.next;
             }
-            Console.WriteLine();
+            return result;
 
         }
     }
