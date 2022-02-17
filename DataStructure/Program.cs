@@ -38,7 +38,6 @@ namespace DataStructure
             //TestTree();
             //TestAVLTree();
             //TestTrie();
-            //TestGraph();
             //TestDirectedGraph();
             StringManipulation();
             Console.ReadKey();
@@ -70,28 +69,6 @@ namespace DataStructure
             Console.WriteLine(graph.GetShortestDistance("A", "C"));
             Console.WriteLine(graph.HasCycle());
             graph.Print();
-        }
-
-        private static void TestGraph()
-        {
-            Graph graph = new Graph();
-            graph.AddNode("A");
-            graph.AddNode("B");
-            graph.AddEdge("A", "B");
-            graph.AddNode("C");
-            //graph.AddEdge("C","A");
-            graph.AddNode("D");
-            //graph.AddEdge("B","D");
-            //graph.AddEdge("B", "C");
-            //graph.Print();
-            //graph.RemoveNode("Jack");
-            //Console.WriteLine($"removed node Jack");
-            //graph.RemoveEdge("John", "Sub");
-            //graph.RemoveNode("Jack");
-            //graph.TraverseDepthFirst("B");
-            //graph.Print();
-            //graph.TopologicalSort();
-            Console.WriteLine(graph.HasCycle());
         }
 
         private static void TestTrie()

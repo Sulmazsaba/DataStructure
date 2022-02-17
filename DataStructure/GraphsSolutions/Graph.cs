@@ -41,12 +41,7 @@ namespace DataStructure.GraphsSolutions
         public void AddEdge(string from, string to)
         {
             var fromNode = _nodes[from];
-            if (fromNode == null)
-                throw new InvalidOperationException();
-
             var toNode = _nodes[to];
-            if (toNode == null)
-                throw new InvalidOperationException();
 
             _adjList[fromNode].Add(toNode);
         }
@@ -55,9 +50,6 @@ namespace DataStructure.GraphsSolutions
         {
             var toNode = _nodes[to];
             var fromNode = _nodes[from];
-
-            if (fromNode == null || toNode == null)
-                return;
 
             _adjList[fromNode].Remove(toNode);
 
@@ -110,7 +102,7 @@ namespace DataStructure.GraphsSolutions
 
         }
 
-        public void TopologicalSort()
+        public List<string> TopologicalSort()
         {
             Stack<Node> stack = new Stack<Node>();
             var visited = new HashSet<Node>();
@@ -118,13 +110,15 @@ namespace DataStructure.GraphsSolutions
             foreach (var node in _nodes.Values)
                 TopologicalSort(node, visited, stack);
 
-
+            var result = new List<string>();
             while (stack.Count != 0)
             {
-                Console.WriteLine(stack.Pop().label);
+                result.Add(stack.Pop().label);
             }
-        }
 
+            return result;
+        }
+        
         private void TopologicalSort(Node root, HashSet<Node> visited, Stack<Node> stack)
         {
             if (visited.Contains(root))
@@ -176,8 +170,9 @@ namespace DataStructure.GraphsSolutions
             visiting.Remove(node);
             return false;
         }
-        public void Print()
+        public List<string> Print()
         {
+            var result = new List<string>();
             foreach (var source in _adjList.Keys)
             {
                 var target = _adjList[source];
@@ -185,10 +180,12 @@ namespace DataStructure.GraphsSolutions
                 {
                     foreach (var node in target)
                     {
-                        Console.WriteLine($"relations from {source.label} to {node.label}");
+                        result.Add($"{source.label}=>{node.label}");
                     }
                 }
             }
+
+            return result;
         }
 
         private class Node
