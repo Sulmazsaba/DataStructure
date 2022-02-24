@@ -70,5 +70,21 @@ namespace DataStructure.Tests
             result = stc.Display();
             result.Should().Be("3=>12=>9=>");
         }
+
+        [Theory]
+        [InlineData(true, '{', '}')]
+        [InlineData(false, '{', ')')]
+        [InlineData(false, '{')]
+        [InlineData(false, '(', ']')]
+        [InlineData(false, '(', '}')]
+        [InlineData(false, ')')]
+        [InlineData(true, '{', '(', ')', '}', '[', ']')]
+        [InlineData(true, '{', '[', '{', '}', ']', '}')]
+        public void Balanced_brackets(bool result, params char[] brackets)
+        {
+            var areBalanced = BalancedBracket.AreBracketsBalanced(brackets);
+            areBalanced.Should().Be(result);
+
+        }
     }
 }

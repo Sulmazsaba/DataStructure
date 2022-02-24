@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>DataStructure</RootNamespace>
     <AssemblyName>DataStructure</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -120,6 +121,7 @@
     <Compile Include="Sorting\QuickSort.cs" />
     <Compile Include="Sorting\SelectionSort.cs" />
     <Compile Include="Sorting\Shell.cs" />
+    <Compile Include="Stack\BalancedBracket.cs" />
     <Compile Include="Stack\StacksArray.cs" />
     <Compile Include="Stack\StacksLinkedList.cs" />
     <Compile Include="StringManipulation\StringUtils.cs" />
