@@ -25,7 +25,6 @@ namespace DataStructure
         {
             //TestCircularLinkedList();
             //TestDoublyLinkedList();
-            //Sorting();
             //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
@@ -184,25 +183,6 @@ namespace DataStructure
             var index = ExponentialSearch.Search(sortedArr, 543);
             Console.WriteLine(index);
 
-        }
-
-
-        private static void Sorting()
-        {
-            int[] arr = { 2, 5, 4, 8, 12, 1, 10, 11, 10, 10, 10 };
-            //SelectionSort.Sort(arr,arr.Length);
-            //Insertion.Sort(arr,arr.Length);
-            //Bubble.Sort(arr);
-            //var arr3 =  MergeSort.Sort(arr.ToList());
-            //Shell.Sort(arr, arr.Length);
-            //QuickSort.Sort(arr,0,arr.Length-1);
-            //Counting.Sort(arr,19);
-            //BucketSort.Sort(arr,4);
-            foreach (var i in arr)
-            {
-                Console.Write(i + "-->");
-            }
-            Console.WriteLine();
         }
 
         private static void TestCircularLinkedList()

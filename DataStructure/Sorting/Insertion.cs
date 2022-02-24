@@ -15,7 +15,7 @@ namespace DataStructure.Sorting
             {
                 var current = a[i];
                 var position = i;
-                while (position >0 && a[position - 1] > current)
+                while (position > 0 && a[position - 1] > current)
                 {
                     a[position] = a[position - 1];
                     position--;
@@ -24,6 +24,6 @@ namespace DataStructure.Sorting
                 a[position] = current;
             }
         }
-        
+
     }
 }
