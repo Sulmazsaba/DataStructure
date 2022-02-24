@@ -30,7 +30,6 @@ namespace DataStructure
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
 
-            //TestHashTable();
             //TestHeap();
             //HeapSort();
             //TestHeapify();
@@ -171,20 +170,6 @@ namespace DataStructure
             Console.WriteLine(removedItem);
         }
 
-        private static void TestHashTable()
-        {
-
-            //var statement = "Hi This is ALi".ToCharArray();
-            //Console.WriteLine(Problems.GetFirstRepeatedChar(statement));
-
-            var table = new HashTable();
-            table.Put(4, "Saba");
-            table.Put(3, "Lagha");
-            table.Put(12, "Sohrab");
-            table.Put(4, "SS");
-            table.Remove(12);
-            Console.WriteLine(table.Get(4));
-        }
         private static void Searching()
         {
             int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
