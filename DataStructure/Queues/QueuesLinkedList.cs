@@ -63,15 +63,16 @@ namespace DataStructure.Queues
             return element;
         }
 
-        public void Display()
+        public string Display()
         {
+            var result = new StringBuilder();
             Node p = front;
             while (p != null)
             {
-                Console.Write(p.element + " --> ");
+                result.Append(p.element + "=>");
                 p = p.next;
             }
-            Console.WriteLine();
+            return result.ToString();
         }
 
         public int First()

@@ -80,7 +80,7 @@ namespace DataStructure.Tests
         [InlineData(false, ')')]
         [InlineData(true, '{', '(', ')', '}', '[', ']')]
         [InlineData(true, '{', '[', '{', '}', ']', '}')]
-        public void Balanced_brackets(bool result, params char[] brackets)
+        public void Balanced_brackets_should_return_correct_result_in_expression(bool result, params char[] brackets)
         {
             var areBalanced = BalancedBracket.AreBracketsBalanced(brackets);
             areBalanced.Should().Be(result);

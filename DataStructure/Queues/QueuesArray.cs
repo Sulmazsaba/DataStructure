@@ -74,14 +74,15 @@ namespace DataStructure.Queues
         }
 
 
-        public void Display()
+        public string Display()
         {
+            var result = new StringBuilder();
             for (int i = front; i < rear; i++)
             {
-                Console.Write(data[i] + "-->");
+               result.Append(data[i] + "=>");
             }
 
-            Console.WriteLine();
+           return result.ToString();
         }
     }
 }

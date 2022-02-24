@@ -26,7 +26,6 @@ namespace DataStructure
             //TestCircularLinkedList();
             //Sorting();
             //TestDoublyLinkedList();
-            //TestQueue();
             //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
@@ -198,20 +197,6 @@ namespace DataStructure
             //var index = JumpSearch.Search(sortedArr, 413);
             var index = ExponentialSearch.Search(sortedArr, 543);
             Console.WriteLine(index);
-
-        }
-
-        private static void TestQueue()
-        {
-            QueuesLinkedList que = new QueuesLinkedList();
-            //QueuesArray que = new QueuesArray(5);
-            que.Enqueue(5);
-            que.Enqueue(10);
-            que.Enqueue(15);
-            que.Enqueue(2);
-            que.Display();
-            que.Dequeue();
-            que.Display();
 
         }
 
