@@ -24,11 +24,12 @@ namespace DataStructure
         static void Main(string[] args)
         {
             //TestCircularLinkedList();
-            //Sorting();
             //TestDoublyLinkedList();
+            //Sorting();
             //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
+
             //TestHashTable();
             //TestHeap();
             //HeapSort();
@@ -38,7 +39,7 @@ namespace DataStructure
             //TestTrie();
             //TestDirectedGraph();
             StringManipulation();
-            Console.ReadKey();
+
         }
 
         private static void StringManipulation()

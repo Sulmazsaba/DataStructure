@@ -82,5 +82,38 @@ namespace DataStructure.Tests
             first = que.First();
             first.Should().Be(-1);
         }
+
+        [Fact]
+        public void Queues_by_stacks_works_fine()
+        {
+            QueuesStacks que = new QueuesStacks();
+
+            que.Enqueue(5);
+            que.Enqueue(10);
+            que.Enqueue(15);
+            que.Enqueue(2);
+
+            var result = que.Display();
+            result.Should().Be("5=>10=>15=>2=>");
+
+            var number = que.Dequeue();
+            number.Should().Be(5);
+
+
+            result = que.Display();
+            result.Should().Be("10=>15=>2=>");
+
+            que.Reverse();
+            result = que.Display();
+            result.Should().Be("2=>15=>10=>");
+
+            que.Dequeue();
+            que.Dequeue();
+            que.Dequeue();
+
+            number = que.Dequeue();
+            number.Should().BeNegative();
+
+        }
     }
 }
