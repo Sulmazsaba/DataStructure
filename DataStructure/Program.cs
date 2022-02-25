@@ -25,15 +25,12 @@ namespace DataStructure
         {
             //TestCircularLinkedList();
             //TestDoublyLinkedList();
-            //Searching();
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
 
             //TestHeap();
             //HeapSort();
             //TestHeapify();
-            //TestTree();
-            //TestAVLTree();
             //TestTrie();
             //TestDirectedGraph();
             StringManipulation();
@@ -96,34 +93,6 @@ namespace DataStructure
             Console.WriteLine();
         }
 
-        private static void TestTree()
-        {
-            Tree tree = new Tree();
-            tree.Insert(4);
-            tree.Insert(10);
-            tree.Insert(1);
-            tree.Insert(15);
-            tree.Insert(6);
-
-            Tree tree2 = new Tree();
-            tree2.Insert(4);
-            tree2.Insert(10);
-            tree2.Insert(1);
-            tree2.Insert(15);
-            //tree2.Insert(6);
-
-            //Console.WriteLine($"Pre-Order Traversal : ");
-            //tree.TraversePreOrder();
-
-            //Console.WriteLine(tree.Height());
-            //Console.WriteLine(tree.Find(1));
-            //Console.WriteLine(tree.MinValue());
-
-            //Console.WriteLine(tree.Equals(tree2));
-            //Console.WriteLine(tree.IsBinarySearchTree());
-            tree.GetNodeAtDistance(1);
-        }
-
         private static void TestHeapify()
         {
 
@@ -168,23 +137,6 @@ namespace DataStructure
             var removedItem = heap.Remove();
             Console.WriteLine(removedItem);
         }
-
-        private static void Searching()
-        {
-            int[] arr = new[] { 1, 5, 3, 9, 33, 8 };
-            int[] sortedArr = new[] { 1, 2, 4, 6, 10, 313, 413, 490, 501, 506, 543, 566, 576 };
-            //LinearSearch search = new LinearSearch();
-            //BinarySearch search = new BinarySearch();
-            //Console.WriteLine(search.Search(sortedArr, 7, 9));
-            //Console.WriteLine(search.Search(sortedArr, 7, 10));
-            //Console.WriteLine(search.RecSearch(sortedArr, 0, sortedArr.Length, 5));
-            //var index = TernarySearch.Search(sortedArr, 0, sortedArr.Length - 1, 506);
-            //var index = JumpSearch.Search(sortedArr, 413);
-            var index = ExponentialSearch.Search(sortedArr, 543);
-            Console.WriteLine(index);
-
-        }
-
         private static void TestCircularLinkedList()
         {
             var cirLL = new CircularLinkedList();

@@ -151,14 +151,13 @@ namespace DataStructure.TreeSolutions
 
         }
 
-        public int GetNodeAtDistance(int k)
-        {
-            return GetNodeAtDistance(k, Root);
-        }
+        public int GetNodeAtDistance(int k) => GetNodeAtDistance(k, Root);
         public bool IsBinarySearchTree() => IsBinarySearchTree(Root, int.MinValue, int.MaxValue);
+
         public void TraversePreOrder() => TraversePreOrder(Root);
         public int MinValue() => MinValue(Root);
         public int Height() => Height(Root);
+
         private bool IsEmpty() => Root == null;
         private bool IsLeaf(Node root) => root.LeftChild == null && root.RightChild == null;
         public bool Equals(Tree tree) => Equals(Root, tree.Root);
