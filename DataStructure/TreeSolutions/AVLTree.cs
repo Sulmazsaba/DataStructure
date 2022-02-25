@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataStructure.TreeSolutions
 {
-    public class AVLTree
+    public partial class AVLTree
     {
         private AVLNode root;
-        public void Insert(int value)
-        {
-            root = Insert(value, root);
-        }
 
         private AVLNode Insert(int value, AVLNode root)
         {
@@ -59,13 +55,13 @@ namespace DataStructure.TreeSolutions
             newRoot.rightChild = root;
 
             root.height = Math.Max(Height(root.leftChild), Height(root.rightChild)) + 1;
+
             SetHeight(root);
             SetHeight(newRoot);
 
             return newRoot;
         }
 
-        private void SetHeight(AVLNode node) => node.height = Math.Max(Height(node.leftChild), Height(node.rightChild)) + 1;
         private void Balance(AVLNode root)
         {
             if (IsRightHeavy(root))
@@ -84,31 +80,12 @@ namespace DataStructure.TreeSolutions
             }
             
         }
+        private void SetHeight(AVLNode node) => node.height = Math.Max(Height(node.leftChild), Height(node.rightChild)) + 1;
         private int Height(AVLNode node) => node?.height ?? -1;
         private bool IsEmpty() => root == null;
         private bool IsLeftHeavy(AVLNode node) => BalanceFactor(node) > 1;
         private bool IsRightHeavy(AVLNode node) => BalanceFactor(node) < -1;
-
-        private int BalanceFactor(AVLNode node) =>
-            (node == null) ? 0 : Height(node.leftChild) - Height(node.rightChild);
-        private class AVLNode
-        {
-            public int Value;
-            public AVLNode leftChild;
-            public AVLNode rightChild;
-            public int height;
-
-            public AVLNode(int value, AVLNode leftChild = null, AVLNode rightChild = null)
-            {
-                Value = value;
-                leftChild = leftChild;
-                rightChild = rightChild;
-            }
-
-            public override string ToString()
-            {
-                return $"Value = {this.Value}";
-            }
-        }
+        private int BalanceFactor(AVLNode node) => (node == null) ? 0 : Height(node.leftChild) - Height(node.rightChild);
+        public void Insert(int value) => root = Insert(value, root);
     }
 }

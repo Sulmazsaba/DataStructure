@@ -126,8 +126,10 @@
     <Compile Include="Stack\StacksArray.cs" />
     <Compile Include="Stack\StacksLinkedList.cs" />
     <Compile Include="StringManipulation\StringUtils.cs" />
+    <Compile Include="TreeSolutions\AVLNode.cs" />
     <Compile Include="TreeSolutions\AVLTree.cs" />
     <Compile Include="TreeSolutions\Tree.cs" />
+    <Compile Include="TriesSolution\Node.cs" />
     <Compile Include="TriesSolution\Trie.cs" />
   </ItemGroup>
   <ItemGroup>

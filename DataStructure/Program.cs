@@ -28,9 +28,6 @@ namespace DataStructure
             //Recursion recursion = new Recursion();
             //Console.WriteLine(recursion.Factorial(0));
 
-            //TestHeap();
-            //HeapSort();
-            //TestHeapify();
             //TestTrie();
             //TestDirectedGraph();
             StringManipulation();
@@ -84,59 +81,7 @@ namespace DataStructure
             var list = trie.FindWords("can");
             Console.WriteLine(list.Count);
         }
-        private static void TestAVLTree()
-        {
-            AVLTree avlTree = new AVLTree();
-            avlTree.Insert(1);
-            avlTree.Insert(2);
-            avlTree.Insert(3);
-            Console.WriteLine();
-        }
 
-        private static void TestHeapify()
-        {
-
-            int[] numbers = { 4, 2, 6, 22, 3, 99, 100, 1, 55, 23 };
-            Console.Write(String.Join(",", numbers));
-            Console.WriteLine();
-            MaxHeap.Heapify(numbers);
-            Console.Write(String.Join(",", numbers));
-
-        }
-
-        private static void HeapSort()
-        {
-            var heap = new Heap();
-            int[] numbers = { 1, 10, 32, 5, 4, 76, 82, 12, 9, 7 };
-            foreach (var number in numbers)
-            {
-                heap.Insert(number);
-            }
-
-            //for (int i = 0; i < numbers.Length; i++)
-            //{
-            //    numbers[i] = heap.Remove();
-            //}
-
-            for (int i = numbers.Length - 1; i >= 0; i--)
-            {
-                numbers[i] = heap.Remove();
-            }
-            Console.Write(string.Join(",", numbers));
-
-        }
-
-        public static void TestHeap()
-        {
-            var heap = new Heap();
-            heap.Insert(10);
-            heap.Insert(2);
-            heap.Insert(11);
-            heap.Insert(4);
-            heap.Insert(22);
-            var removedItem = heap.Remove();
-            Console.WriteLine(removedItem);
-        }
         private static void TestCircularLinkedList()
         {
             var cirLL = new CircularLinkedList();

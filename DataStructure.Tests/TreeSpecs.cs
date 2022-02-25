@@ -1,4 +1,5 @@
-﻿using DataStructure.TreeSolutions;
+﻿using DataStructure.HeapSolutions;
+using DataStructure.TreeSolutions;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -96,6 +97,68 @@ namespace DataStructure.Tests
         public void Traverse_level_order_should_work_fine()
         {
 
+        }
+
+        [Fact]
+        public void AVL_tree_should_work_fine()
+        {
+            AVLTree avlTree = new AVLTree();
+            avlTree.Insert(1);
+            avlTree.Insert(2);
+            avlTree.Insert(3);
+        }
+
+        [Fact]
+        public void Heap_should_work_correct()
+        {
+            var heap = new Heap();
+            heap.Insert(10);
+            heap.Insert(2);
+            heap.Insert(11);
+            heap.Insert(4);
+            heap.Insert(22);
+            var removedItem = heap.Remove();
+            removedItem.Should().Be(22);
+        }
+
+        [Fact]
+        public void Heap_sort_should_work_correct()
+        {
+            var heap = new Heap();
+            int[] numbers = { 1, 10, 32, 5, 4, 9 };
+            foreach (var number in numbers)
+            {
+                heap.Insert(number);
+            }
+
+            for (int i = numbers.Length - 1; i >= 0; i--)
+            {
+                numbers[i] = heap.Remove();
+            }
+
+            var result = string.Join(",", numbers);
+            result.Should().Be("1,4,5,9,10,32");
+
+        }
+
+        [Fact]
+        public void Heapify_max_heap_should_work_fine()
+        {
+            int[] numbers = { 4, 2, 6, 22, 3, 99 };
+
+            MaxHeap.Heapify(numbers);
+            var res = String.Join(",", numbers);
+
+            res.Should().Be("99,22,6,4,3,2");
+        }
+
+        [Fact]
+        public void Find_kth_largest_in_max_heap()
+        {
+            int[] numbers = { 4, 2, 6, 22, 3, 99 };
+
+            var res = MaxHeap.GetKthLargest(numbers, 2);
+            res.Should().Be(22);
         }
     }
 }

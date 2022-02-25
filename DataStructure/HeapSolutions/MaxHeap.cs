@@ -44,8 +44,7 @@ namespace DataStructure.HeapSolutions
             Heapify(numbers, largerIndex);
         }
 
-        private static void Swap(int[] numbers, int first, int second) =>
-            (numbers[first], numbers[second]) = (numbers[second], numbers[first]);
+        private static void Swap(int[] numbers, int first, int second) => (numbers[first], numbers[second]) = (numbers[second], numbers[first]);
 
         public static int GetKthLargest(int[] array, int k)
         {

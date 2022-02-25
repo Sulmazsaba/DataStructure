@@ -86,7 +86,6 @@ namespace DataStructure.HeapSolutions
         private int RightChildIndex(int parent) => parent * 2 + 2;
         private int Parent(int index) => (index - 1) / 2;
         private void Swap(int first, int second) => (items[first], items[second]) = (items[second], items[first]);
-
         public int Max()
         {
             if (IsEmpty)
