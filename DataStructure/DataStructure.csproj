@@ -93,7 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GraphsSolutions\Graph.cs" />
-    <Compile Include="GraphsSolutions\WeightedGraph.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.Edge.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.EdgeComparer.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.Node.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.NodeComparer.cs" />
+    <Compile Include="GraphsSolutions\Weighted\WeightedGraph.NodeEntry.cs" />
     <Compile Include="HashTableSolutions\HashTable.cs" />
     <Compile Include="HashTableSolutions\Problems.cs" />
     <Compile Include="HeapSolutions\Heap.cs" />

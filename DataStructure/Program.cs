@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataStructure.GraphsSolutions;
+using DataStructure.GraphsSolutions.Weighted;
 using DataStructure.HashTableSolutions;
 using DataStructure.HeapSolutions;
 using DataStructure.LinkedList;
@@ -25,13 +25,8 @@ namespace DataStructure
         {
             //TestCircularLinkedList();
             //TestDoublyLinkedList();
-            //Recursion recursion = new Recursion();
-            //Console.WriteLine(recursion.Factorial(0));
 
-            //TestTrie();
-            //TestDirectedGraph();
             StringManipulation();
-
         }
 
         private static void StringManipulation()
@@ -46,40 +41,6 @@ namespace DataStructure
             //Console.WriteLine(StringUtils.Capitalize(word));
             //Console.WriteLine(StringUtils.AreAnagrams("SABa","BASA"));
             Console.WriteLine(StringUtils.ArePalindrome("ABBAS"));
-        }
-        private static void TestDirectedGraph()
-        {
-            WeightedGraph graph = new WeightedGraph();
-            graph.AddNode("A");
-            graph.AddNode("B");
-            graph.AddNode("C");
-            graph.AddNode("D");
-            graph.AddEdge("A", "B", 2);
-            graph.AddEdge("B", "C", 3);
-            graph.AddEdge("C", "A", 10);
-            Console.WriteLine(graph.GetShortestDistance("A", "C"));
-            Console.WriteLine(graph.HasCycle());
-            graph.Print();
-        }
-
-        private static void TestTrie()
-        {
-            Trie trie = new Trie();
-            trie.Insert("canada");
-            trie.Insert("can");
-            trie.Insert("car");
-            trie.Insert("cancer");
-            //trie.Insert("cardinal");
-            //trie.Insert("care");
-            //trie.Insert("car");
-            //Console.WriteLine(trie.Contains("can"));
-            //trie.Traverse();
-            //trie.Remove("canada");
-            //trie.Traverse();
-
-
-            var list = trie.FindWords("can");
-            Console.WriteLine(list.Count);
         }
 
         private static void TestCircularLinkedList()

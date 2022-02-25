@@ -1,5 +1,6 @@
 ﻿using DataStructure.HeapSolutions;
 using DataStructure.TreeSolutions;
+using DataStructure.TriesSolution;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -159,6 +160,33 @@ namespace DataStructure.Tests
 
             var res = MaxHeap.GetKthLargest(numbers, 2);
             res.Should().Be(22);
+        }
+
+        [Fact]
+        public void Trie_should_work_fine()
+        {
+
+            Trie trie = new Trie();
+            trie.Insert("canada");
+            trie.Insert("can");
+            trie.Insert("car");
+            trie.Insert("cancer");
+
+
+            var list = trie.FindWords("can");
+            var count = list.Count;
+            count.Should().Be(3);
+
+            trie.Insert("cardinal");
+            trie.Insert("care");
+            trie.Insert("car");
+
+            var isContained = trie.Contains("can");
+            isContained.Should().BeTrue();
+
+            trie.Traverse();
+            trie.Remove("canada");
+            trie.Traverse();
         }
     }
 }
