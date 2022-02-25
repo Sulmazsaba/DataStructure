@@ -26,22 +26,8 @@ namespace DataStructure
             //TestCircularLinkedList();
             //TestDoublyLinkedList();
 
-            StringManipulation();
         }
 
-        private static void StringManipulation()
-        {
-            string word = "this is my world";
-            //Console.WriteLine(StringUtils.CountVowels(word));
-            //Console.WriteLine(StringUtils.Reverse("hello"));
-            //Console.WriteLine(StringUtils.ReverseWords(word));
-            //Console.WriteLine(StringUtils.IsRotated("ABCD","BCDD"));
-            //StringUtils.RemoveDuplicateChar(ref word);
-            //Console.WriteLine(StringUtils.GetMostRepeatedChar("thisismemyfriends"));
-            //Console.WriteLine(StringUtils.Capitalize(word));
-            //Console.WriteLine(StringUtils.AreAnagrams("SABa","BASA"));
-            Console.WriteLine(StringUtils.ArePalindrome("ABBAS"));
-        }
 
         private static void TestCircularLinkedList()
         {

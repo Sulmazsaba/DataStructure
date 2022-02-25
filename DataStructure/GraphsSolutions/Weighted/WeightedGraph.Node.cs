@@ -14,16 +14,10 @@ namespace DataStructure.GraphsSolutions.Weighted
                 this.label = label;
             }
 
-            public void AddEdge(Node to, int weight)
-            {
-                _edges.Add(new Edge(weight, this, to));
-            }
+            public void AddEdge(Node to, int weight) => _edges.Add(new Edge(weight, this, to));
 
-
-            public List<Edge> GetEdges()
-            {
-                return _edges;
-            }
+            public List<Edge> GetEdges() => _edges;
+            
         }
     }
 }

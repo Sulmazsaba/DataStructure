@@ -15,10 +15,8 @@
                 this.to = to;
             }
 
-            public override string ToString()
-            {
-                return @$"{from.label} to {to.label} ";
-            }
+            public override string ToString() => @$"{from.label} to {to.label} ";
+            
         }
     }
 }

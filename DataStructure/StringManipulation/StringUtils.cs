@@ -25,8 +25,7 @@ namespace DataStructure.StringManipulation
             return string.Join(" ", words.Reverse());
         }
 
-        public static bool IsRotated(string first, string second) =>
-            (first.Length == second.Length) && (first + first).Contains(second);
+        public static bool IsRotated(string first, string second) => (first.Length == second.Length) && (first + first.Reverse()).Contains(second);
 
         public static void RemoveDuplicateChar(ref string word)
         {
@@ -81,9 +80,7 @@ namespace DataStructure.StringManipulation
 
         }
 
-        public static bool ArePalindrome(string value)
-        {
-            return value == String.Join("", value.Reverse());
-        }
+        public static bool ArePalindrome(string value) => value == String.Join("", value.Reverse());
+        
     }
 }
